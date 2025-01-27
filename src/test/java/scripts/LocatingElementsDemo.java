@@ -102,8 +102,8 @@ public class LocatingElementsDemo {
         Thread.sleep(2000);
 
         //Path: //*[contains(text(), 'out')]
-        WebElement logoutButton5 = driver.findElement(By.xpath("//a[text()='Logout']"));
-        logoutButton4.click();
+        WebElement logoutButton5 = driver.findElement(By.xpath("//*[contains(text(), 'out')]"));
+        logoutButton5.click();
         Thread.sleep(2000);
 
 

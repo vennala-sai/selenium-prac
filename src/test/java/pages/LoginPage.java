@@ -1,0 +1,45 @@
+package pages;
+
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class LoginPage {
+    WebDriver driver;
+
+
+    @FindBy(id="ctl00_MainContent_username")
+    private WebElement usernameField;
+
+    @FindBy(name="ctl00$MainContent$password")
+    private WebElement passwordField;
+
+    public LoginPage(WebDriver driver){
+        this.driver = driver;
+        PageFactory.initElements(driver, this); // will automatically initialize and assign these elements to the correct attributes, you don't have to call them multiple times
+    }
+
+    public void enterUsername(String username){
+        usernameField.sendKeys(username);
+    }
+    public void enterPassword(String password){
+        passwordField.sendKeys(password);
+    }
+    public void pressEnterKey(){
+        passwordField.sendKeys(Keys.ENTER);
+    }
+
+    public boolean isUsernameFieldDisplayed() {
+        return usernameField.isDisplayed();
+    }
+
+    //old way
+//    public WebElement usernameField(){
+//        return this.driver.findElement(By.id("ctl00_MainContent_username"));
+//    }
+//    public WebElement passwordField(){
+//        return this.driver.findElement(By.name("ctl00$MainContent$password"));
+//    }
+}

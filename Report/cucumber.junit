@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="9.215" tests="4" skipped="0" failures="0" errors="0">
+<testcase classname="As a user, I want to test the login page so that the user can login properly" name="User should be able to login with valid credentials" time="3.099">
+<system-out><![CDATA[
+Given User launches the application.........................................passed
+And All login fields should be displayed....................................passed
+When User enters valid username and password................................passed
+And Click the login button..................................................passed
+Then User should be able to see the title "Web Orders"......................passed
+]]></system-out>
+</testcase>
+<testcase classname="As a user, I want to test the login page so that the user can login properly" name="User should not be able to login with invalid credentials - #1.1" time="2.081">
+<system-out><![CDATA[
+Given User launches the application.........................................passed
+And All login fields should be displayed....................................passed
+When User enter invalid "sai" and "pass"....................................passed
+And Click the login button..................................................passed
+Then User should be able to see the alert "Invalid Login or Password."......passed
+]]></system-out>
+</testcase>
+<testcase classname="As a user, I want to test the login page so that the user can login properly" name="User should not be able to login with invalid credentials - #1.2" time="1.87">
+<system-out><![CDATA[
+Given User launches the application.........................................passed
+And All login fields should be displayed....................................passed
+When User enter invalid "tester" and "testing"..............................passed
+And Click the login button..................................................passed
+Then User should be able to see the alert "Invalid Login or Password."......passed
+]]></system-out>
+</testcase>
+<testcase classname="As a user, I want to test the login page so that the user can login properly" name="User should not be able to login with invalid credentials - #1.3" time="2.019">
+<system-out><![CDATA[
+Given User launches the application.........................................passed
+And All login fields should be displayed....................................passed
+When User enter invalid "user" and "pass"...................................passed
+And Click the login button..................................................passed
+Then User should be able to see the alert "Invalid Login or Password."......passed
+]]></system-out>
+</testcase>
+</testsuite>

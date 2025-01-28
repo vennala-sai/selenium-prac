@@ -37,10 +37,10 @@ public class DriverUtilities {
         String driverName = getDriverName();
         switch (driverName){
             case "Chrome":
-                this.driver = new ChromeDriver();
+                driver = new ChromeDriver();
                 break;
             case "Firefox":
-                this.driver = new FirefoxDriver();
+                driver = new FirefoxDriver();
             default:
                 break;
         }
@@ -58,5 +58,11 @@ public class DriverUtilities {
 
         driverName = config.getProperty("browser");
         return driverName;
+    }
+
+    public static void resetDriver(){
+        driverUtilities.driver.quit();
+        driverUtilities.driver = null;
+        driverUtilities = null;
     }
 }

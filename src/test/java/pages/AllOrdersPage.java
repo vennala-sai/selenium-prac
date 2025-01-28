@@ -23,5 +23,11 @@ public class AllOrdersPage {
     public WebElement getLogout(){
         return driver.findElement(By.xpath("//*[@id='ctl00_logout']"));
     }
+    public WebElement getPageTitle(){
+        return driver.findElement(By.tagName("h1"));
+    }
+    public boolean isPageTitleDisplayed(){
+        return driver.findElement(By.tagName("h1")).isDisplayed();
+    }
 
 }
